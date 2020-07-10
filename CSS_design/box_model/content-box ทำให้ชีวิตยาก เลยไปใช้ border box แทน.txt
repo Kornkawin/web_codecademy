@@ -1,0 +1,6 @@
+content-box -> width and height จะเป็นของ content-box
+border-box -> width กับ height จะเป็นของ content + padding + border
+
+จะเห็นว่าแบบ border box แก้ code ง่ายกว่ามากในทางปฏิบัติ
+
+เราจึงใช้ reset.css เพื่อให้มัน reset ค่า default ให้เป็นไปตามที่ developer ต้องการใช้จริงๆ

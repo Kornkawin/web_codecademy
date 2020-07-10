@@ -1,0 +1,50 @@
+/* Match multiple selectors to the same CSS rule, using a comma-separated list. [Groups of CSS Selectors] */
+h5, p {
+      font-family: Georgia;
+}
+
+/* CSS type selectors are used to match all elements of a given type or tag name. [CSS Type Selectors] */
+h1 {
+      color: maroon;
+}
+
+/* CSS selectors can be chained so that rule sets apply only to elements that match all criteria. [Chaining Selectors] */
+h2.destination {
+      font-family: cursive;
+}
+
+/* The CSS class selector matches elements based on the contents of their class attribute. [CSS class selectors] */
+.title {
+      color: teal;
+}
+
+.uppercase {
+      text-transform: uppercase;
+}
+
+.cursive {
+      font-family: cursive;
+}
+
+.capitalize {
+      text-transform: capitalize;
+}
+
+.publish-time {
+      color: gray;
+}
+
+/* The CSS !important rule is used on declarations to override any other declarations
+for a property and ignore selector specificity. !important rules will ensure that
+a specific declaration always applies to the matched elements. However, generally it is good
+to avoid using !important as bad practice. */
+h5 {
+    color: rebeccapurple !important;
+}
+
+/* The CSS descendant selector combinator is used to match elements that are descended
+from another matched selector. Nested elements can be selected by separating selectors with a space.
+All matching elements are selected regardless of the nesting level in the HTML. */
+.description h5 {
+      color: teal;
+}
