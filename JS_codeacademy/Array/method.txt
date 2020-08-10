@@ -1,0 +1,32 @@
+MUTATING METHODs
+
+array.push(item1, item2);
+เป็นการเติม item1 กับ item2 ต่อทางท้ายใน array
+
+array.pop(); หรือ
+let lastItem = array.pop();
+เป็นการลบ item สุดท้ายใน array ออก (และ assign ค่านั้นลงตัวแปรได้) -> LIFO
+
+array.shift(); หรือ
+let firstItem = array.shift();
+เป็นการลบ item ตัวแรกใน array ออก (และ assign ค่านั้นลงตัวแปรได้)
+
+array.unshift(item1, item2);
+เป็นการเติม item1 กับ item2 ต่อทางต้นใน array
+
+array.splice(indexToStart, numberOfIndices, 'stringToAdd');
+ใช้สำหรับแทนค่า 'StringToAdd' ลงใน index ที่ต้องการ 
+
+
+
+
+NON-MUTATING METHODs
+
+array.slice(i0, i1)
+เป็นการ slice array เหมือนใน python -> array[i0:i1]
+
+let index = array.indexOf(item)
+เป็นการส่งค่า index ของ item นั้นๆ ใน array
+
+array.join(' ')
+ใช้สำหรับ join ค่า str ที่อยู่ใน array

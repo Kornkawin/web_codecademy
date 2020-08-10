@@ -1,0 +1,19 @@
+flex-direction
+Up to this point, we’ve only covered flex items that stretch and shrink horizontally and wrap vertically. 
+As previously stated, flex containers have two axes: a major axis and a cross axis. 
+By default, the major axis is horizontal and the cross axis is vertical.
+
+The major axis is used to position flex items with the following properties:
+
+1.justify-content
+2.flex-wrap
+3.flex-grow
+4.flex-shrink
+
+The cross axis is used to position flex items with the following properties:
+
+1.align-items
+2.align-content
+
+The major axis and cross axis are interchangeable. We can switch them using the flex-direction property. 
+If we add the flex-direction property and give it a value of column, the flex items will be ordered vertically, not horizontally.

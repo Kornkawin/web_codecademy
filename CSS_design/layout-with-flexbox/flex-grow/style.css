@@ -36,7 +36,7 @@ h2 {
 }
 
 .middle.side {
-
+  // the flex items will not stretch by default
 }
 
 .middle.center {

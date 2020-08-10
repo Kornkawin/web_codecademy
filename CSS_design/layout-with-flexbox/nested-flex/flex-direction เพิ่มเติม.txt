@@ -1,0 +1,26 @@
+กรณี flex-direction: row;
+The major axis (horizontal axis) is used to position flex items with the following properties:
+
+1.justify-content
+2.flex-wrap
+3.flex-grow
+4.flex-shrink
+
+The cross axis (vertical axis) is used to position flex items with the following properties:
+
+1.align-items
+2.align-content
+
+
+กรณี flex-direction: column;
+The major axis (vertical axis) is used to position flex items with the following properties:
+
+1.justify-content
+2.flex-wrap
+3.flex-grow
+4.flex-shrink
+
+The cross axis (horizontal axis) is used to position flex items with the following properties:
+
+1.align-items
+2.align-content
