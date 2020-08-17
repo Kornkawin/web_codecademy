@@ -1,0 +1,121 @@
+const menu = {
+  _courses: {
+    appetizers: [], 
+    mains: [], 
+    desserts: []
+  },
+  
+  get appetizers() {
+    return this._courses.appetizers;
+  },
+  get mains() {
+    return this._courses.mains;
+  },
+  get desserts() {
+    return this._courses.desserts;
+  },
+  get courses() {
+    return {
+      appetizers: this.appetizers,  // call getter method.
+      mains: this.mains,            // call getter method.
+      desserts: this.desserts       // call getter method.
+    }
+  },
+  
+  set appetizers(appetizerIn) {
+    this._courses.appetizers.push(appetizerIn);
+  },
+  set mains(mainIn) {
+    this._courses.mains.push(mainIn);
+  },
+  set desserts(dessertIn) {
+    this._courses.desserts.push(dessertIn);
+  },
+
+  addDishToCourse(courseName, dishName, dishPrice) {
+    const dish = {name: dishName, price: dishPrice};
+    this._courses[courseName].push(dish);
+  },
+
+  getRandomDishFromCourse(courseName) {
+    const dishes = this._courses[courseName];
+    const randomIndex = Math.floor(Math.random() * dishes.length);
+    return dishes[randomIndex];
+  },
+
+  generateRandomMeal() {
+    const appetizer = this.getRandomDishFromCourse('appetizers');
+    const main = this.getRandomDishFromCourse('mains');
+    const dessert = this.getRandomDishFromCourse('desserts');
+    const total_price = appetizer.price + main.price + dessert.price;
+    return `Your meal is ${appetizer.name}, ${main.name}, and ${dessert.name}. The price is $${total_price}.`;
+  }
+};
+
+menu.addDishToCourse('appetizers', 'Caesar Salad', 4.);
+menu.addDishToCourse('appetizers', 'Salmon Salad', 3.);
+menu.addDishToCourse('appetizers', 'Chips', 2.);
+menu.addDishToCourse('mains', 'Breakfast Set', 10.);
+menu.addDishToCourse('mains', 'Sushi', 30.);
+menu.addDishToCourse('mains', 'Noodle', 15.);
+menu.addDishToCourse('desserts', 'Cake', 1.);
+menu.addDishToCourse('desserts', 'Ice-cream', 2.);
+menu.addDishToCourse('desserts', 'Fruits', 3.);
+
+const meal = menu.generateRandomMeal();
+console.log(meal);
+
+console.log('\nTest getter method'); 
+console.log(menu.appetizers);
+console.log(menu.mains);
+console.log(menu.desserts);
+console.log(menu.courses);
+
+console.log('\nTest setter method'); 
+menu.appetizers = {name: 'Fried Chicken', price: 5};
+console.log(menu.appetizers);
+menu.mains = {name: 'Burgers', price: 5};
+console.log(menu.mains);
+menu.desserts = {name: 'Thai desserts', price: 4};
+console.log(menu.desserts);
+
+///////////////////////////////////////////////////////////////////////////////////
+
+Your meal is Chips, Noodle, and Cake. The price is $18.
+
+Test getter method
+[ { name: 'Caesar Salad', price: 4 },
+  { name: 'Salmon Salad', price: 3 },
+  { name: 'Chips', price: 2 } ]
+[ { name: 'Breakfast Set', price: 10 },
+  { name: 'Sushi', price: 30 },
+  { name: 'Noodle', price: 15 } ]
+[ { name: 'Cake', price: 1 },
+  { name: 'Ice-cream', price: 2 },
+  { name: 'Fruits', price: 3 } ]
+{ appetizers: 
+   [ { name: 'Caesar Salad', price: 4 },
+     { name: 'Salmon Salad', price: 3 },
+     { name: 'Chips', price: 2 } ],
+  mains: 
+   [ { name: 'Breakfast Set', price: 10 },
+     { name: 'Sushi', price: 30 },
+     { name: 'Noodle', price: 15 } ],
+  desserts: 
+   [ { name: 'Cake', price: 1 },
+     { name: 'Ice-cream', price: 2 },
+     { name: 'Fruits', price: 3 } ] }
+
+Test setter method
+[ { name: 'Caesar Salad', price: 4 },
+  { name: 'Salmon Salad', price: 3 },
+  { name: 'Chips', price: 2 },
+  { name: 'Fried Chicken', price: 5 } ]
+[ { name: 'Breakfast Set', price: 10 },
+  { name: 'Sushi', price: 30 },
+  { name: 'Noodle', price: 15 },
+  { name: 'Burgers', price: 5 } ]
+[ { name: 'Cake', price: 1 },
+  { name: 'Ice-cream', price: 2 },
+  { name: 'Fruits', price: 3 },
+  { name: 'Thai desserts', price: 4 } ]
