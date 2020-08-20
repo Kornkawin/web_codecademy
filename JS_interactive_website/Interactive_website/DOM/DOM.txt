@@ -1,0 +1,36 @@
+What is DOM?
+
+The DOM is a logical tree-like Model that organizes a web page’s HTML Document as an Object.
+Note: There are other types of documents, such as XML and SVG, that are also modeled as DOM structures.
+
+The DOM is a language-agnostic structure implemented by browsers to allow for web scripting languages, 
+like JavaScript, to access, modify, and update the structure of an HTML web page in an organized way.
+
+For this reason, we like to think of the DOM as the link between an HTML web page and scripting languages.
+
+
+
+
+The DOM as a Tree Structure
+
+In the DOM tree, the top-most node is called the root node, and it represents the HTML document. 
+The descendants of the root node are the HTML tags in the document, starting with the <html> tag 
+followed by the <head> and <body> tags and so on.
+
+
+
+
+Nodes and Elements in the DOM
+
+There are nine different types of node objects in the DOM tree. In our diagram, the node objects 
+with the sharp-edge rectangles are of the type ELEMENT, while the rounded edge rectangles are of 
+type TEXT, because they represent the text inside the HTML paragraph elements.
+
+
+
+
+Attributes of Element Node
+
+Much like an element in an HTML page, the DOM allows us to access a node’s attributes, such as its class, 
+id, and inline style.
+
