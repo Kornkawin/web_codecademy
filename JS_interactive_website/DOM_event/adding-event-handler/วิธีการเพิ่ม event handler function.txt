@@ -47,3 +47,4 @@ view.addEventListener('click', textChange);
 close.addEventListener('click', textReturn);
 
 จะเห็นว่ามันสามารถใช้ .onclick และ .addEventListener() พร้อมกันได้โดยไม่ทับกัน คือ view จะมีทั้ง open() และ textChange()
+และยัง .addEventListener() เพิ่มได้อีกเรื่อยๆด้วย
