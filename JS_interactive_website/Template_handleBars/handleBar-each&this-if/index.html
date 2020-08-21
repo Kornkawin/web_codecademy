@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Languages</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="public/style.css" type="text/css" rel="stylesheet">
     <script src="handlebars.min.js"></script>
-    <!-- Add an {{each}} helper block in the <script> element below-->
     <script id="languagesTemp" type="text/x-handlebars-template">
-      {{#each languages}}
-        <div class="card">
-          <p>I should learn {{this.name}}.</p>
+			{{#each languages}}
+      	<div class="card">
+        	{{#if this.modern}}
+            <p>I should learn {{this.name}}.</p>
+          {{else}}
+            <p>When I have time, I'll learn {{this.name}}.</p>
+          {{/if}}
         </div>
       {{/each}}
     </script>
@@ -20,6 +23,6 @@
     </h1>
     <div id="goals">
     </div>
-  	<script src="main.js" type="text/javascript"></script>
+  	<script src="public/main.js" type="text/javascript"></script>
   </body>
 </html>

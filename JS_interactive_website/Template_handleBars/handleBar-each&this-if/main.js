@@ -3,9 +3,22 @@ const template = Handlebars.compile(source);
 
 const context = {
   languages: [
-    {name: 'HTML'},
-    {name: 'CSS'},
-    {name: 'JavaScript'}
+    {
+      name: 'HTML',
+      modern: true
+    },
+    {
+      name:'CSS',
+      modern: true
+    },
+    {
+      name: 'JavaScript',
+      modern: true
+    },
+    {
+      name: 'COBOL',
+      modern: false
+    }
   ]
 };
 
