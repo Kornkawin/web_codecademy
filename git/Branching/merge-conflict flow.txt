@@ -1,0 +1,26 @@
+﻿1. Switch to the master branch.
+2. From the terminal, enter the command below:
+
+git merge fencing
+
+- This will try to merge fencing into master.
+- In the output, notice the lines:
+
+CONFLICT (content): Merge conflict in resumé.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+3. We must fix the merge conflict by code editor
+
+FROM:
+<<<<<<< HEAD
+master version of line
+=======
+fencing version of line
+>>>>>>> fencing
+
+TO:
+fencing version of line
+
+4. git add filename
+5. git commit -m "Resolve merge conflict"
+
