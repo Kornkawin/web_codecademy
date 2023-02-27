@@ -1,7 +1,0 @@
-Node.js supports require()/module.exports, but as of ES6, JS supports a new more readable and flexible syntax for exporting modules. 
-These are usually broken down into one of two techniques: 
-1. default export 
-2. named exports.
-
-When using ES6 syntax, we use export default in place of module.exports. Node.js doesn’t support export default by default, 
-so module.exports is usually used for Node.js development and ES6 syntax is used for front-end development.

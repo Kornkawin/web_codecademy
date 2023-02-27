@@ -1,2 +1,0 @@
-The keypress event is fired when a user presses a key down and releases it. This is different from using keydown and keyup events together, 
-because those are two complete events and keypress is one complete event.

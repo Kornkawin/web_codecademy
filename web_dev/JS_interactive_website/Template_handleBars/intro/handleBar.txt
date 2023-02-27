@@ -1,5 +1,0 @@
-The idea of templating becomes even more useful for web pages that have thousands or even millions of views. 
-Take for instance this exercise that you’re working on right now — it has the same material for every visitor, 
-the only major difference is your own personal icon on the top right corner. You wouldn’t want to create 
-a unique page for every single visitor, use a template and sub in the values you need to.
-

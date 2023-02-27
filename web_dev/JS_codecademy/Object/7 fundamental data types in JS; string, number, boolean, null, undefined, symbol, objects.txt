@@ -1,3 +1,0 @@
-string, number, boolean, null, undefined, symbol
-
-are primitve data type in JS

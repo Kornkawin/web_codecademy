@@ -1,2 +1,0 @@
-document.body.innerHTML = 'The cat loves the dog.';
-document.body.innerHTML = '<h2>This is a heading</h2>'; 
