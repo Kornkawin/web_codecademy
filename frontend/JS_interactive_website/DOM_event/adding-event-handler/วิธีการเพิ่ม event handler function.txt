@@ -1,0 +1,50 @@
+Pattern 1: It’s best practice to create named event handler functions, instead of anonymous functions. 
+
+let eventHandlerFunction = function() {
+  // this block of code will run
+}
+eventTarget.onclick = eventHandlerFunction;
+
+
+
+Pattern 2: Use .addEventListener()
+An event listener waits for a specific event to occur and calls a named event handler function to respond to it.
+
+This method requires two arguments:
+1. The event type as a string
+2. The event handler function
+
+eventTarget.addEventListener('click', eventHandlerFunction);
+
+You’ll want to use the .addEventListener() method to allow multiple event handlers to be registered.
+
+
+
+EXAMPLE
+
+let view = document.getElementById('view-button');
+let close = document.getElementById('close-button');
+let codey = document.getElementById('codey');
+let open = function() {
+  codey.style.display = 'block';
+  close.style.display = 'block';
+};
+let hide = function() {
+  codey.style.display = 'none';
+  close.style.display = 'none';
+};
+view.onclick = open;
+close.onclick = hide;
+
+// Write your code here
+let textChange = () => {
+  view.innerHTML = 'Hello, World!';
+};
+let textReturn = () => {
+  view.innerHTML = 'View';
+};
+view.addEventListener('click', textChange);
+close.addEventListener('click', textReturn);
+
+จะเห็นว่ามันสามารถใช้ .onclick และ .addEventListener() พร้อมกันได้โดยไม่ทับกัน คือ view จะมีทั้ง open() และ textChange()
+และยัง .addEventListener() เพิ่มได้อีกเรื่อยๆด้วย

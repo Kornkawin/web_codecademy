@@ -1,0 +1,17 @@
+The HTMLElement property hidden is a Boolean which is true if the element is hidden; otherwise the value is false. 
+This is quite different from using the CSS property display to control the visibility of an element.
+
+Use CSS when:
+	ยังต้องการใช้อยู่ แต่แค่ไม่อยากโชว์ในหน้านี้ ในตอนนี้ (Hide)
+	มันจะยังขึ้นใน HTML
+
+Use JS when:
+	ไม่ต้องการใช้แล้ว อยากเอาออกจาก DOM (Remove)
+	มันจะไม่ขึ้นใน HTMLแล้ว	
+	
+	แบบใช้ .removeChild()
+	let target = document.getElementById('oaxaca');
+	document.getElementById('more-destinations').removeChild(target);
+
+	แบบใช้ hidden property
+	document.getElementById('sign').hidden = true;

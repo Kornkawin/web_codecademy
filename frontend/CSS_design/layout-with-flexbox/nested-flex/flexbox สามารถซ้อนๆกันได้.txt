@@ -1,0 +1,30 @@
+The items have properties that dictate how they will be positioned 
+in the parent container and how their flex item children will be 
+positioned in them.
+
+Examples
+
+กำหนดว่า child ใน container class จะต้อง flex-direction: column; justify-content: center; align-items: center;
+.container {
+  width: 300px;
+  height: 300px;
+  background-color: dodgerblue;
+  border: 1px solid white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+กำหนดว่า child ใน child class จะต้อง justify-content: center; align-items: center;
+.child {
+  height: 75px;
+  width: 75px;
+  background-color: whitesmoke;
+  border: 1px solid snow;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

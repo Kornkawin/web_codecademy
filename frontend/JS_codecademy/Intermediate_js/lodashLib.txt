@@ -1,0 +1,107 @@
+const _ = {
+  clamp(num, lowerbound, upperbound) {
+    if (num < lowerbound) {
+      return lowerbound;
+    } else if (num > upperbound) {
+      return upperbound;
+    } else {
+      return num
+    }
+  },
+  
+  inRange(num, startVal, endVal) {
+    if (endVal === undefined) {
+      endVal = startVal;
+      startVal = 0;
+    } else if (startVal > endVal) {
+      const tmp = endVal;
+      endVal = startVal;
+      startVal = tmp;
+    }
+    if (startVal <= num && num < endVal) {
+      return true;
+    } else {
+      return false;
+    }
+  },
+
+  words(str) {
+    const word = str.split(' ') 
+    return word;
+  },
+
+  pad(str, len) {
+    if (str.length >= len) {
+      return str
+    }
+    const startPaddingLength = Math.floor((len - str.length)/2);
+    const endPaddingLength = len - startPaddingLength - str.length;
+    let paddingString = '';
+    for (let i=0; i<startPaddingLength; i++) {
+      paddingString = paddingString + ' ';
+    }
+    paddingString = paddingString + str;
+    for (let i=0; i<endPaddingLength; i++) {
+      paddingString = paddingString + ' ';
+    }
+    return paddingString;
+  },
+
+  has(obj, key) {
+    const keys = Object.keys(obj);
+    return (keys.includes(key)) ? true : false;
+  },
+
+  invert(obj) {
+    const invertedObject = {};
+    for (let key in obj) {
+      const originalVal = obj[key];
+      invertedObject[originalVal] = key;
+    }
+    return invertedObject;
+  },
+
+  findKey(obj, func) {
+    for (let key in obj) {
+      const val = obj[key];
+      const indicator = func(val);
+      if (indicator) {
+        return key;
+      }
+    }
+    return undefined;
+  },
+
+  drop(arr, num) {
+    if (num === undefined) {
+      num = 1;
+    }
+    for (let i=0; i<num; i++){
+      arr.shift();
+    }
+    return arr;
+  },
+
+  dropWhile(arr, func) {
+    const num = arr.findIndex((element, index) => {
+      return !func(element, index, arr);
+    });
+    const modArr = this.drop(arr, num);
+    return modArr;
+  },
+
+  chunk(arr, sizeOfChunked) {
+    if (sizeOfChunked === undefined) {
+      sizeOfChunked = 1;
+    }
+    const result = [];
+    for (let i=0; i<arr.length; i=i+sizeOfChunked) {
+      const arrChunked = arr.slice(i, i+sizeOfChunked);
+      result.push(arrChunked);
+    }
+    return result;
+  }
+};
+
+// Do not write or modify code below this line.
+module.exports = _;

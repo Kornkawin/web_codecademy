@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Block & Scope</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+      const city = 'New York City';
+      const logCitySkyline = () => {
+        /*
+          A block is the code found inside a set of curly braces {}
+        */
+        let skyscraper = 'Empire State Building';
+        return 'The stars over the ' + skyscraper + ' in ' + city;
+      }
+      document.getElementById("demo").innerHTML = logCitySkyline();
+    </script>
+
+  </body>
+</html>

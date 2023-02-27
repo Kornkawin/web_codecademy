@@ -1,0 +1,26 @@
+The defer attribute specifies scripts should be executed after the HTML file is completely parsed. 
+When the HTML parser encounters a <script> element with the defer attribute, it loads the script 
+but defers the actual execution of the JavaScript until after it finishes parsing the rest of the elements 
+in the HTML file.
+
+เป็นการโหลดไว้ก่อนแล้วไปรัน script ตอน render html เสร็จแล้ว 
+(To ensures that the entire HTML file has been parsed before the script is executed.)
+
+
+
+ตัวหนังสือจะเป็นสีฟ้า แทนสีเหลือง
+<!DOCTYPE html> 
+<html>
+ 
+  <head>
+  	<link rel="stylesheet" href="style.css">
+  	<!--  Add the defer attribute to the script below:  -->
+  	<script id="blue" src="turnBlue.js" defer></script>
+  </head>
+
+  <body>		
+  	<p class="centered" id="logo">Codecademy</p>
+    
+  	<script id="yellow" src="turnYellow.js"></script>
+  </body>
+</html>

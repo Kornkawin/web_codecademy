@@ -1,0 +1,69 @@
+let story = 'Last weekend, I took literally the most beautiful bike ride of my life. The route is called "The 9W to Nyack" and it actually stretches all the way from Riverside Park in Manhattan to South Nyack, New Jersey. It\'s really an adventure from beginning to end! It is a 48 mile loop and it basically took me an entire day. I stopped at Riverbank State Park to take some extremely artsy photos. It was a short stop, though, because I had a really long way left to go. After a quick photo op at the very popular Little Red Lighthouse, I began my trek across the George Washington Bridge into New Jersey.  The GW is actually very long - 4,760 feet! I was already very tired by the time I got to the other side.  An hour later, I reached Greenbrook Nature Sanctuary, an extremely beautiful park along the coast of the Hudson.  Something that was very surprising to me was that near the end of the route you actually cross back into New York! At this point, you are very close to the end.';
+
+let overusedWords = ['really', 'very', 'basically'];
+
+let unnecessaryWords = ['extremely', 'literally', 'actually' ];
+
+const storyWords = story.split(' ');
+// console.log(storyWords);
+console.log(storyWords.length); //188
+
+// includes() usage
+const betterWords = storyWords.filter(word => {
+  return !unnecessaryWords.includes(word);
+});
+// console.log(betterWords);
+
+// overused words counting
+const overusedList = betterWords.filter(word => {
+  return overusedWords.includes(word);
+});
+console.log(overusedList);
+console.log('All overused word counts: ' + overusedList.length);
+
+const counter = [0,0,0];
+betterWords.forEach(word => {  
+  if(word === overusedWords[0]) {
+    counter[0]++;
+  }
+  else if(word === overusedWords[1]) {
+    counter[1]++;
+  }
+  else if(word === overusedWords[2]) {
+    counter[2]++;
+  }
+});
+for (let i=0; i<overusedWords.length; i++) {
+  console.log(`${overusedWords[i]} counts: ` + counter[i]);
+};
+
+// sentense counting
+let sentences = 0;
+betterWords.forEach(word => {  
+  if(word[word.length-1] === '.' || word[word.length-1] === '!') {
+    sentences++;
+  };
+});
+console.log('All sentense counts: ' + sentences);
+
+console.log(betterWords.join(' '));
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+output:
+
+188
+[ 'really',
+  'basically',
+  'really',
+  'very',
+  'very',
+  'very',
+  'very',
+  'very' ]
+All overused word counts: 8
+really counts: 2
+very counts: 5
+basically counts: 1
+All sentense counts: 12
+Last weekend, I took the most beautiful bike ride of my life. The route is called "The 9W to Nyack" and it stretches all the way from Riverside Park in Manhattan to South Nyack, New Jersey. It's really an adventure from beginning to end! It is a 48 mile loop and it basically took me an entire day. I stopped at Riverbank State Park to take some artsy photos. It was a short stop, though, because I had a really long way left to go. After a quick photo op at the very popular Little Red Lighthouse, I began my trek across the George Washington Bridge into New Jersey.  The GW is very long - 4,760 feet! I was already very tired by the time I got to the other side.  An hour later, I reached Greenbrook Nature Sanctuary, an beautiful park along the coast of the Hudson.  Something that was very surprising to me was that near the end of the route you cross back into New York! At this point, you are very close to the end.

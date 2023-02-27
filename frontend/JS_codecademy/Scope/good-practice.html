@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Practices Good Scoping</title>
+  </head>
+  <body>
+    <p id="demo">See In Dev-tool</p>
+
+    <script type="text/javascript">
+      /*
+        Tightly scoping your variables will greatly improve your code.
+        - It’s easier to maintain your code, since your code will be modular.
+        - It will save memory in your code because it will cease to exist
+          after the block finishes running.
+      */
+      const logVisibleLightWaves = () => {
+        let lightWaves = 'Moonlight';
+      	let region = 'The Arctic';
+
+        if(region === 'The Arctic'){
+          let lightWaves = 'Northern Lights';
+          console.log(lightWaves); // Northern Lights (Local Variable)
+        };
+        console.log(lightWaves); // Moonlight (Global Variable)
+      };
+      logVisibleLightWaves();
+    </script>
+
+  </body>
+</html>

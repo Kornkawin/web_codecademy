@@ -1,0 +1,8 @@
+EXAMPLE
+
+document.body.style.backgroundColor = '#201F2E';
+
+let blueElement = document.querySelector('.blue');
+blueElement.style.backgroundColor = 'blue';
+OR
+document.querySelector('.blue').style.fontFamily = 'Roboto';

@@ -1,0 +1,9 @@
+document.querySelector('h1').innerHTML = 'Most popular TV show searches in 2016';
+document.getElementById('fourth').innerHTML = 'Fourth element';
+
+.querySelector(<CSS Selector>) โดย Selector เป็นได้ทั้ง
+1. Element tags (h1, p)
+2. Classes (.className)
+3. id (#id)
+
+.getElementById('id') ใส่แค่ ID name ไม่ต้องมี #

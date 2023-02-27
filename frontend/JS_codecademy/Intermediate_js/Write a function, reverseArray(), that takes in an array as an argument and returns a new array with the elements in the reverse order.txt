@@ -1,0 +1,16 @@
+// Write your code here:
+const reverseArray = arr => {
+  let result = [];
+  for (let i=0; i<arr.length; i++) {
+    result.unshift(arr[i]);
+  };
+  return result;
+};
+
+// When you're ready to test your code, uncomment the below and run: 
+const sentence = ['sense.','make', 'all', 'will', 'This'];
+console.log(reverseArray(sentence));
+// Should print ['This', 'will', 'all', 'make', 'sense.'];
+const num = [0, 1, 2, 3, 4];
+console.log(reverseArray(num));
+// Should print [4, 3, 2, 1, 0];

@@ -1,0 +1,6 @@
+let first = document.body.firstChild;
+first.innerHTML = 'I am the child!';
+(จะ edit child element ตัวแรกของ <Body>)
+
+first.parentNode.innerHTML = 'I am the parent and my inner HTML has been replaced!';
+(จะ edit body element เพราะเป็น parent node ของ first variable)
