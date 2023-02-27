@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  color: #FFF;
+  color: #FFF !important;
   font-size: 2em;
   padding-top: 100px;
   width: 100%;
@@ -31,7 +31,7 @@ h2 {
 }
 
 p {
-  color: AliceBlue;
+  color: aliceblue;
   line-height: 1.3em;
   text-align: left;
   width: 100%;
@@ -62,7 +62,6 @@ p {
   width: 60%;
   background-color: white;
   color: black;
-  opacity: 0.75;
 }
 
 .content {
@@ -70,7 +69,7 @@ p {
 }
 
 .image {
-  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/soccer.jpeg");
+  background-image: url('https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg');
   background-size: cover;
   background-position: center;
   height: 300px;
