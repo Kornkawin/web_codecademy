@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: gainsboro;
+}
+
+h1 {
+   text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: rebeccapurple;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border: solid #4D00FF 2px;
+}
+
+th {
+    text-align: center;
+    background-color: lightskyblue;
+}
+
+td {
+    border-top: solid #4D00FF 1px;
+    padding-right: 15px;
+}
+
+.highlight {
+    background-color: beige;
+    font-family: monospace, sans-serif;
+}
