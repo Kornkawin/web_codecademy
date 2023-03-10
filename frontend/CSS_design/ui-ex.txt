@@ -1,0 +1,3 @@
+UX/UI patterns
+https://ui-patterns.com/
+https://jnd.org/signifiers_not_affordances/
