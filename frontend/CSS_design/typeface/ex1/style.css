@@ -1,202 +1,164 @@
+/* glegoo-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Glegoo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/glegoo-v14-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/glegoo-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/glegoo-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/glegoo-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/glegoo-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/glegoo-v14-latin-regular.svg#Glegoo') format('svg'); /* Legacy iOS */
+}
+/* glegoo-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Glegoo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/glegoo-v14-latin-700.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/glegoo-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/glegoo-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/glegoo-v14-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/glegoo-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/glegoo-v14-latin-700.svg#Glegoo') format('svg'); /* Legacy iOS */
+}
+
 /* Universal Styles */
-/* font-face from google fonts: "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" */
-@font-face {
-  font-family: 'Space Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Space Mono'), local('SpaceMono-Regular'), url(https://fonts.gstatic.com/s/spacemono/v5/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* font-face from google fonts: "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" */
-@font-face {
-  font-family: 'Space Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Space Mono Bold'), local('SpaceMono-Bold'), url(https://fonts.gstatic.com/s/spacemono/v5/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* font-face from local font file */
-@font-face {
-  font-family: 'Glegoo';
-  src: url("../fonts/Glegoo-Regular.ttf") format('truetype');
-}
-
 html {
-  font-size: 16px;
-  font-family: "Arial", sans-serif;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-  background-color: #F2F2F2;
+    background-color: #F2F2F2;
+    text-align: center;
 }
 
 h1 {
-  color: white;
-  font-size: 28px;
-  font-family: Georgia;
-  text-transform: uppercase;
-  // text-align: left;
+    padding: 20px;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
 }
 
 h2 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 2.5;
-  font-family: Georgia;
-  word-spacing: 0.05em;
-  letter-spacing: 0.02em;
+    padding: 40px 20px 0 20px;
+    font-size: 24px;
+    text-align: center;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 p {
-  margin: 16px 0;
-  font-family: Helvetica;
-  word-spacing: 0.05em;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
 }
 
-strong {
-  font-weight: bold;
-}
-
-#serif, /* Offset linked sections to account for header. */
-#sans,
-#mono {
-  padding-top: 77px;
-  margin-top: -77px;
-}
 
 /* Header */
-
 .header {
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 1.25;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  font-weight: 900;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 900;
 }
 
 .header li {
-  display: inline-block;
+    display: inline-block;
+    padding: 10px;
 }
 
 .header a {
-  display: block;
-  color: #4A4A4A;
-  padding: 30px 20px;
+    color: #4A4A4A;
 }
 
 a.home {
-  color: #4D00FF;
+    color: #4D00FF;
 }
 
 
 /* Banner Section */
-
 .banner {
-  background-color: #4D00FF;
-  padding: 100px 0;
-  margin-top: 77px;
-  text-align: center;
+    margin-top: 74px;
+    padding: 40px 0 100px 0;
+    background-color: #4D00FF;
 }
 
 .banner p {
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  padding: 10px;
-  color: #ffffff;
-  font-weight: bold;
-  line-height: 1.4;
-  font-family: Glegoo;
-  font-size: 20px;
+    font-family: 'Glegoo', serif;
+    font-size: 20px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    color: #ffffff;
+    font-weight: lighter;
+    word-spacing: 0.25em;
+    line-height: 1.4;
 }
 
-/* Editorial Sections */
 
+/* Editorial Sections */
 .editorial {
-  padding: 20px;
-  margin: 20px 0;
-  text-align: center;
-  color: #4C4C4C;
+    padding-bottom: 40px;
+    color: #717171;
+    font-family: 'Trebuchet MS', 'Times New Roman', serif;
 }
 
 /* Font Card Sections */
-
 .font-card {
-  background-color: #ffffff;
-  margin: 50px 0;
-  padding: 20px 50px;
+    padding: 10px 0 40px 0;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .font-card .creator {
-  font-size: 20px;
-  line-height: 1.25;
-  font-style: italic;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-style: italic;
 }
 
 .sample {
-  display: inline-block;
-  padding: 0 20px;
-  margin: 20px;
-}
-
-.sample h2 {
-  line-height: 1.5;
+    display: inline-block;
+    padding: 5px 40px;
 }
 
 .sample .text {
-  color: #4D00FF;
-  font-size: 100px;
+    color: #4D00FF;
+    font-size: 100px;
 }
 
-/* Add styles for the Garamond font here */
-.garamond .sample .text {
-  font-family: Garamond, serif;
+.garamond {
+    font-family: Garamond, serif;
 }
 
-/* Add styles for the Helvetica font here */
-.helvetica .sample .text {
-  font-family: Helvetica, sans-serif;
+.helvetica {
+    font-family: Helvetica, serif;
 }
 
-/* Add styles for the Space Mono font here */
-.space .sample .text {
-  font-family: "Space Mono", monospace;
+.space {
+    font-family: 'Space Mono', monospace;
 }
 
 .bold {
-  font-weight: 900;
+    font-weight: 900;
 }
 
 .regular {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 .italic {
-  font-weight: normal;
-  font-style: italic;
-}
-
-/* Media Queries */
-
-@media only screen and (max-width: 535px) {
-  .header {
-    font-size: 14px;
-  }
-
-  .header a {
-    padding: 30px 20px;
-  }
-
-  a.home {
-    display: none;
-  }
+    font-weight: normal;
+    font-style: italic;
 }

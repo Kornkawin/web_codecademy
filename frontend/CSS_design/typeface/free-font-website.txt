@@ -1,6 +1,19 @@
 download free fonts 
 https://www.fontsquirrel.com/
 
-
-free font link for embed
+free font link for embed in html file
 https://fonts.google.com/
+
+free font-face generator (Best support for all browsers)
+https://gwfh.mranftl.com/fonts
+
+
+Web Fonts Using @font-face
+Fonts can also be added using a @font-face ruleset in your CSS stylesheet instead of using a <link> element in your HTML document.
+As mentioned earlier, fonts can be downloaded just like any other file on the web. They come in a few different file formats, such as:
+• OTF (OpenType Font)
+• TTF (TrueType Font)
+• WOFF (Web Open Font Format)
+• WOFF2 (Web Open Font Format 2)
+The different formats are a progression of standards for how fonts will work with different browsers, with WOFF2 being the most progressive.
+It's a good idea to include TTF, WOFF, and WOFF2 formats with your @font-face rule to ensure compatibility on all browsers.

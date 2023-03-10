@@ -20,7 +20,7 @@ body {
 .roasting {
   margin: 40px auto;
   padding: 20px 30px 40px 30px;
-  background-color: #FFFFFFFFF;
+  background-color: #FFFFFF;
   overflow: auto;
   width: 75%;
   border-radius: 4px;
@@ -51,23 +51,23 @@ body {
 
 /* Roast types */
 .green {
-  background-color: #9EB599;
+  background-color: darkseagreen;
 }
 
 .light {
-  background-color: #683C2C;
+  background-color: sienna;
 }
 
 .city {
-  background-color: #4C352D;
+  background-color: saddlebrown;
 }
 
 .vienna {
-  background-color: #352926;
+  background-color: brown;
 }
 
 .italian {
-  background-color: #141212;
+  background-color: black;
 }
 
 /* Typography */
@@ -80,8 +80,6 @@ h1 {
   position: relative;
   text-align: center;
   top: 20%;
-  color: MidnightBlue;
-  background-color: aqua;
 }
 
 h2 {
