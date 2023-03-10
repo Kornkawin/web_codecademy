@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Croissant One";
-  src: url('fonts/CroissantOne-Regular.ttf') format('truetype');
+  src: url('../fonts/CroissantOne-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -121,7 +121,7 @@ html {
   justify-content: center;
   align-items: center;
   height: 50rem;
-  background: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/project-morocco/banner.jpg") center center no-repeat;
+  background: url("https://content.codecademy.com/courses/freelance-1/unit-6/project-morocco/banner.jpg") center center no-repeat;
   background-size: cover;
   color: #ffb78c;
 }
